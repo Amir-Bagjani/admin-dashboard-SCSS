@@ -1,0 +1,26 @@
+@import "../config";
+
+.layout__main {
+  display: flex;
+  overflow-x: hidden;
+
+  &--section {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    overflow-x: hidden;
+
+    &__content {
+      width: 100%;
+      max-width: var(--max-width);
+      margin-inline: auto;
+      padding: 2rem;
+    }
+  }
+}
+
+@media only screen and (max-width: 700px){
+  .layout__main {
+    margin-right: 60px;
+  }
+}

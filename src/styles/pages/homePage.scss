@@ -1,0 +1,46 @@
+@import "../config";
+
+.home-page {
+  background-color: var(--bg-primary-color);
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+
+  &__widgets {
+    @include grid(20rem);
+    margin-bottom: 3rem;
+  }
+
+  &__charts {
+    display: flex;
+    gap: 2rem;
+    width: 100%;
+    margin-bottom: 3rem;
+  }
+
+  &__list-container {
+    box-shadow: var(--box-shadow);
+    padding: 2rem;
+    margin: 2rem;
+    ::-webkit-scrollbar {
+      height: 0.7rem;
+    }
+
+    .list-title {
+      font-weight: 500;
+      @include title-text(1.5rem);
+      margin-bottom: 1.5rem;
+    }
+  }
+
+}
+
+@media only screen and (max-width: 1000px) {
+  .home-page {
+    overflow-y: auto !important;
+    // .home-container {
+      &__charts {
+        flex-flow: column-reverse;
+      }
+    }
+  }
+// }

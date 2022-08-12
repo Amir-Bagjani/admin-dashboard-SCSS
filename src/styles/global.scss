@@ -1,0 +1,86 @@
+@import "config";
+
+:root {
+  --font-color-d: #346e72;
+  --font-color-l: #51868a;
+  --heading-color: #000021;
+  --bg-color: #eaecef;//
+  --bg-primary-color: #fff;
+  --border: 0.1rem solid rgba(0, 0, 0, 0.2);
+  --main-color: #253464; //
+  --yellow-color: #ffe94e;
+  --sidebar-hover: #e4ebf6;//
+  --box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
+  --max-width: 1000px;
+  --font-family: IRANSans, Arial, Helvetica, sans-serif;
+}
+[data-theme="dark"] {
+  --font-color-d: rgba(255, 255, 255, 0.7);//
+  --font-color-l: #fff;//
+  --heading-color: rgba(255, 255, 255, 0.5);//
+  --bg-color: #001E3C;//
+  --bg-primary-color: #132F4C;
+  --main-color: #0A1929; //
+  --sidebar-hover: #103759;//
+  --border: 0.1rem solid rgba(0, 0, 0, 0.2);
+  --box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  scroll-behavior: smooth;
+  list-style: none;
+}
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+body {
+  background: var(--bg-color);
+  direction: rtl;
+  font-family: var(--font-family);
+}
+i,
+svg {
+  cursor: pointer;
+}
+a {
+  text-decoration: none;
+  color: unset;
+}
+
+//utilities
+.wrapper {
+  max-width: var(--max-width);
+  margin-inline: auto;
+}
+
+// Scrollbar
+::-webkit-scrollbar {
+  width: 0.5rem;
+  transform: rotateX(90deg) !important;
+  -moz-transform: rotateX(90deg); /* Mozilla */
+  -webkit-transform: rotateX(90deg); /* Safari and Chrome */
+  -ms-transform: rotateX(90deg); /* IE 9+ */
+  -o-transform: rotateX(90deg); /* Opera */
+}
+::-webkit-scrollbar-thumb {
+  background: var(--font-color-d);
+  border-radius: 1rem;
+}
+
+//media queries
+@media (max-width: 991px) {
+  html {
+    font-size: 58%;
+  }
+}
+@media (max-width: 450px) {
+  html {
+    font-size: 50%;
+  }
+}

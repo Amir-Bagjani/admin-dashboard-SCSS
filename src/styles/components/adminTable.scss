@@ -1,0 +1,47 @@
+.admin-table {
+    width: 100%;
+    max-width:100%; 
+    overflow-x: scroll !important;
+  
+    .table {
+      min-width: 100%;
+      background-color: var(--sidebar-hover);
+    }
+    .table-cell {
+      white-space: nowrap;
+      padding: 1.2rem;
+      font-family: "IRANSans", Arial, Helvetica, sans-serif;
+      font-size: 1.5rem;
+      text-align: right;
+    }
+  
+    .cell-wrapper {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+  
+      .image {
+        width: 3.2rem;
+        height: 3.2rem;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+    }
+  
+    .status {
+      padding: 0.5rem;
+      display: block;
+      text-align: center;
+      border-radius: 0.5rem;
+  
+      &.approved {
+        color: green;
+        background-color: rgba(0, 128, 0, 0.2);
+      }
+      &.pending {
+        color: goldenrod;
+        background-color: rgba(218, 165, 32, 0.2);
+      }
+    }
+  }
+  

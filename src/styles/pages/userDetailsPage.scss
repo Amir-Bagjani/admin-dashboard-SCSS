@@ -1,0 +1,95 @@
+.list-detail-page {
+  background-color: var(--bg-primary-color);
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  overflow-x: hidden;
+
+  .top {
+    display: flex;
+    gap: 2rem;
+    padding: 2rem;
+
+    .left {
+      flex: 1;
+      padding: 2rem;
+      box-shadow: 2px 4px 10px 1px rgba(201, 201, 201, 0.5);
+      position: relative;
+
+      .edit-btn {
+        font-family: "IRANSans", arial, helvetica, sans-serif;
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 0.5rem;
+        border-radius: 0 0 0.5rem 0;
+        font-size: 1.3rem;
+        color: #7451f8;
+        background-color: #7551f830;
+        cursor: pointer;
+      }
+
+      .title {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+        color: gray;
+      }
+
+      .item {
+        display: flex;
+        gap: 2rem;
+
+        .item-image {
+          width: 10rem;
+          height: 10rem;
+          border-radius: 50%;
+          object-fit: cover;
+        }
+
+        .item-detail {
+          .item-title {
+            color: #555;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+          }
+          .content {
+            margin-bottom: 1rem;
+            color: gray;
+            font-size: 1.2rem;
+
+            .item-key {
+              font-weight: bold;
+              margin-left: 0.5rem;
+            }
+          }
+        }
+      }
+    }
+    .right {
+      flex: 2;
+    }
+  }
+  .bottom {
+    margin: 2rem;
+    padding: 2rem;
+    box-shadow: 2px 4px 10px 1px rgba(201, 201, 201, 0.5);
+    overflow-x: auto;
+    ::-webkit-scrollbar {
+      height: 0.7rem;
+    }
+
+    .title {
+      font-size: 1.5rem;
+      color: gray;
+      margin-bottom: 2rem;
+    }
+  }
+}
+
+@media (max-width: 870px) {
+  .list-detail-page {
+    .top {
+      flex-flow: column;
+    }
+  }
+}
